@@ -21,7 +21,6 @@ public class GoalappApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(GoalappApplication.class, args);
-
 		
 		log.info("Congrats! Your GoalManagementApplication server has started");
 	}
