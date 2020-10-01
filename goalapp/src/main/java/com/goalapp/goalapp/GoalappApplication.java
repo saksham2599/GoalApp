@@ -10,7 +10,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import lombok.extern.log4j.Log4j2;
 
 
-//@EnableTransactionManagement
 @SpringBootApplication
 @Log4j2
 @EnableAutoConfiguration
