@@ -4,19 +4,13 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import com.goalapp.goalapp.dto.Goal;
 import com.goalapp.goalapp.dto.Transaction;
-import com.goalapp.goalapp.dto.User;
-import com.goalapp.goalapp.exchanges.AddGoalRequest;
 import com.goalapp.goalapp.exchanges.TransactionRequest;
 import com.goalapp.goalapp.exchanges.TransactionResponse;
-import com.goalapp.goalapp.service.GoalService;
 import com.goalapp.goalapp.service.TransactionService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,7 +33,7 @@ public class TransactionController {
     public ResponseEntity<List<Transaction>> getAllTransactions(
         @PathVariable("userId") long userId, @PathVariable("goalId") long goalId) {
             List<Transaction> transactions;
-            transactions = transactionService.getAllTransactions(userId, goalId);
+            transactions = transactionService.getTransactions(userId, goalId);
 
             return ResponseEntity.ok().body(transactions); 
     }

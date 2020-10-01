@@ -3,14 +3,12 @@ package com.goalapp.goalapp.controller;
 import javax.validation.Valid;
 
 import com.goalapp.goalapp.dto.Goal;
-import com.goalapp.goalapp.dto.User;
 import com.goalapp.goalapp.exchanges.AddGoalRequest;
 import com.goalapp.goalapp.service.GoalService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

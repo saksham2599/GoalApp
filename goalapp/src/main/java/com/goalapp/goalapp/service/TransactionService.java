@@ -7,6 +7,6 @@ import com.goalapp.goalapp.exchanges.TransactionRequest;
 import com.goalapp.goalapp.exchanges.TransactionResponse;
 
 public interface TransactionService {
-    List<Transaction> getAllTransactions (Long userId, Long goalId);
+    List<Transaction> getTransactions (Long userId, Long goalId);
     TransactionResponse makeTransaction(Long userId, Long goalId, TransactionRequest transcation);
 }

@@ -1,6 +1,5 @@
 package com.goalapp.goalapp.dto;
 
-import java.util.List;
 import java.util.Set;
 
 import lombok.AllArgsConstructor;

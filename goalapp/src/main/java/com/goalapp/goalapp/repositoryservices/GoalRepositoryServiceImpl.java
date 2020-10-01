@@ -13,7 +13,9 @@ import com.goalapp.goalapp.repositories.GoalRepository;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class GoalRepositoryServiceImpl implements GoalRepositoryService {
 
     @Autowired
@@ -30,7 +32,7 @@ public class GoalRepositoryServiceImpl implements GoalRepositoryService {
         goalEntity.setGoalName(addGoalRequest.getGoalName());
         goalEntity.setTargetAmount(addGoalRequest.getTargetAmount());
         goalEntity.setTransactions(new HashSet<TransactionEntity>());
-        goalEntity.setCurrentAmount(0);
+        goalEntity.setCurrentAmount((long)0);
         goalEntity.setCompleted(false);
         goalEntity.setUser(userEntity);
 

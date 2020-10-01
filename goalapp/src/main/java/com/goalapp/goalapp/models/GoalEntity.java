@@ -2,6 +2,7 @@ package com.goalapp.goalapp.models;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,11 +30,11 @@ public class GoalEntity {
 
     private String goalName;
 
-    private Integer targetAmount;
+    private Long targetAmount;
 
-    private Integer currentAmount;
+    private Long currentAmount;
 
-    @OneToMany(mappedBy = "goal")
+    @OneToMany(mappedBy = "goals", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<TransactionEntity> transactions;
 
     private boolean isCompleted;

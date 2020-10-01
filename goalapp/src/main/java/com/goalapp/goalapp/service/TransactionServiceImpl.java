@@ -5,23 +5,27 @@ import java.util.List;
 import com.goalapp.goalapp.dto.Transaction;
 import com.goalapp.goalapp.exchanges.TransactionRequest;
 import com.goalapp.goalapp.exchanges.TransactionResponse;
-import com.goalapp.goalapp.repositories.GoalRepository;
+import com.goalapp.goalapp.repositoryservices.TransactionRepositoryService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class TransactionServiceImpl implements TransactionService {
 
-    @Override
-    public List<Transaction> getAllTransactions(Long userId, Long goalId) {
+    @Autowired
+    private TransactionRepositoryService transactionRepositoryService;
 
-        return null;
+    @Override
+    public List<Transaction> getTransactions(Long userId, Long goalId) {
+
+        return transactionRepositoryService.getTransactions(userId, goalId);
     }
 
     @Override
     public TransactionResponse makeTransaction(Long userId, Long goalId, TransactionRequest transcation) {
-        // TODO Auto-generated method stub
-        return null;
+        
+        return transactionRepositoryService.makeTransaction(userId, goalId, transcation);
     }
     
 }

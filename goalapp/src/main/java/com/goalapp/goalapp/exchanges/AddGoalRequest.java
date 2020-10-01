@@ -16,5 +16,5 @@ public class AddGoalRequest {
 
     @NotNull
     @Min(1)
-    private Integer targetAmount;
+    private Long targetAmount;
 }

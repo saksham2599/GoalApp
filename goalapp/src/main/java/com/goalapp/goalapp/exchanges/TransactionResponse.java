@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class TransactionResponse {
     Transaction transaction;
     String message;
-    Status status;
+    String status;
 }
 
 enum Status {
